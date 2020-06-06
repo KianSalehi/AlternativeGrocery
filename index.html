@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Palace</title>
+    <link rel="stylesheet" type="text/css" href="Style/Style.css">
+</head>
+<body>
+<div class="sidenav">
+    <a class="tab_links" onclick="tab_info(Event,'Client')">Client</a>
+    <a class="tab_links" onclick="tab_info(Event,'Products')" >Products</a>
+    <a class="tab_links" onclick="tab_info(Event,'Cart')" >Cart</a>
+</div>
+<!-- Tab content -->
+<div id="Client" class="tab_content">
+    <h3>Client Information</h3>
+    <p>Tell us about your preferences.</p>
+    <input type="checkbox" id="organic" name="organic" value=true onchange="populateListProductChoices('Diet','displayProduct',this.id)">
+    <label for="organic">Organic Products</label><br><br>
+    Dietary Preference:<br>
+    <form id="Diet" onchange="populateListProductChoices(this.id,'displayProduct','organic')">
+    <input type="radio" id="VegAGlu" name="Diet" value="VegAGlu">
+    <label for="VegAGlu">Vegetarian and Gluten-Free</label>
+    <input type="radio" id="Vegetarian" name="Diet" value="Vegetarian">
+    <label for="Vegetarian">Vegetarian</label>
+    <input type="radio" id="GlutenFree" name="Diet" value="GlutenFree">
+    <label for="GlutenFree">Gluten-Free</label>
+    <input type="radio" id="None" name="Diet" value="None">
+    <label for="VegAGlu">None</label>
+    </form>
+</div>
+
+<div id="Products" class="tab_content">
+    <h3>Products</h3>
+    <p>Items sorted based on your preferences.</p>
+    Choose items to buy:
+    <div id="displayProduct"></div>
+    <button id="addCart" type="button" class="block" onclick="selectedItems()">
+        Add
+    </button>
+</div>
+
+<div id="Cart" class="tab_content">
+    <h3>Cart</h3>
+    <p>Your shopping cart.</p>
+    <div id="displayCart"></div>
+</div>
+
+<script src="Script/itemList.js"></script>
+<script src="Script/main.js"></script>
+
+</body>
+<footer>
+    <p class="center">Website designed by Kian Salehi</p>
+</footer>
+</html>
