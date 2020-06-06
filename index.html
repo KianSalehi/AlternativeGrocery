@@ -18,6 +18,7 @@
         <a class="tab_links" onclick="tab_info(Event,'Dairy')">Dairy</a>
         <a class="tab_links" onclick="tab_info(Event,'Bread')">Bread</a>
         <a class="tab_links" onclick="tab_info(Event,'Meat')">Meat</a>
+        <a class="tab_links" onclick="tab_info(Event,'Snack')">Snack</a>
     </div>
     <a class="tab_links" onclick="tab_info(Event,'Cart')" >Cart</a>
 
@@ -52,6 +53,51 @@
     </button>
 </div>
 
+<div id="Fruits" class="tab_content">
+    <h3>Products</h3>
+    <p>Items sorted based on your preferences.</p>
+    Choose items to buy:
+    <div id="displayProductFruits"></div>
+    <button id="addCartFruits" type="button" class="block" onclick="selectedItems()">
+        Add
+    </button>
+</div>
+<div id="Dairy" class="tab_content">
+    <h3>Products</h3>
+    <p>Items sorted based on your preferences.</p>
+    Choose items to buy:
+    <div id="displayProductDairy"></div>
+    <button id="addCartDairy" type="button" class="block" onclick="selectedItems()">
+        Add
+    </button>
+</div>
+<div id="Bread" class="tab_content">
+    <h3>Products</h3>
+    <p>Items sorted based on your preferences.</p>
+    Choose items to buy:
+    <div id="displayProductBread"></div>
+    <button id="addCartBread" type="button" class="block" onclick="selectedItems()">
+        Add
+    </button>
+</div>
+<div id="Meat" class="tab_content">
+    <h3>Products</h3>
+    <p>Items sorted based on your preferences.</p>
+    Choose items to buy:
+    <div id="displayProductMeat"></div>
+    <button id="addCartMeat" type="button" class="block" onclick="selectedItems()">
+        Add
+    </button>
+</div>
+<div id="Snack" class="tab_content">
+    <h3>Products</h3>
+    <p>Items sorted based on your preferences.</p>
+    Choose items to buy:
+    <div id="displayProductSnack"></div>
+    <button id="addCartSnack" type="button" class="block" onclick="selectedItems()">
+        Add
+    </button>
+</div>
 <div id="Cart" class="tab_content">
     <h3>Cart</h3>
     <p>Your shopping cart:</p>

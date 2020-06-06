@@ -1,6 +1,7 @@
 var products =[
     {
         name:"Banana",
+        type:"fruit",
         vegetarian:true,
         glutenFree:true,
         organic:true,
@@ -10,6 +11,7 @@ var products =[
     },
     {
         name: "Bread",
+        type:"bread",
         vegetarian: true,
         glutenFree: false,
         organic: false,
@@ -19,6 +21,7 @@ var products =[
     },
     {
         name: "Apple",
+        type:"fruit",
         vegetarian: true,
         glutenFree: true,
         organic: true,
@@ -28,6 +31,7 @@ var products =[
     },
     {
         name: "Chicken breast (4pcs- medium)",
+        type: "meat",
         vegetarian: false,
         glutenFree: true,
         organic: false,
@@ -37,6 +41,7 @@ var products =[
     },
     {
         name: "Milk 1.2L",
+        type: "dairy",
         vegetarian: true,
         glutenFree: true,
         organic: false,
@@ -46,6 +51,7 @@ var products =[
     },
     {
         name: "Pizza dough",
+        type: "bread",
         vegetarian: true,
         glutenFree: false,
         organic: false,
@@ -55,6 +61,7 @@ var products =[
     },
     {
         name: "Popcorn",
+        type: "snack",
         vegetarian: false,
         glutenFree: true,
         organic: false,
@@ -64,6 +71,7 @@ var products =[
     },
     {
         name: "Yogurt",
+        type: "dairy",
         vegetarian: true,
         glutenFree: true,
         organic:true,
@@ -73,6 +81,7 @@ var products =[
     },
     {
         name: "Salmon",
+        type: "meat",
         vegetarian: false,
         glutenFree: true,
         organic: true,
@@ -82,6 +91,7 @@ var products =[
     },
     {
         name: "Eggs (12pcs)",
+        type: "dairy",
         vegetarian: true,
         glutenFree: true,
         organic: true,
