@@ -14,11 +14,12 @@
         <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-container">
-        <a class="tab_links" onclick="tab_info(Event,'Fruits')">Fruits</a>
-        <a class="tab_links" onclick="tab_info(Event,'Dairy')">Dairy</a>
-        <a class="tab_links" onclick="tab_info(Event,'Bread')">Bread</a>
-        <a class="tab_links" onclick="tab_info(Event,'Meat')">Meat</a>
-        <a class="tab_links" onclick="tab_info(Event,'Snack')">Snack</a>
+        <a class="tab_links" onclick="tab_info(Event,'Products')">All</a>
+        <a class="tab_links" onclick="populateListProductChoices('Diet','displayProductFruits','organic');tab_info(Event,'Fruits'); ">Fruits</a>
+        <a class="tab_links" onclick="populateListProductChoices('Diet','displayProductDairy','organic');tab_info(Event,'Dairy'); ">Dairy</a>
+        <a class="tab_links" onclick="populateListProductChoices('Diet','displayProductBread','organic');tab_info(Event,'Bread'); ">Bread</a>
+        <a class="tab_links" onclick="populateListProductChoices('Diet','displayProductMeat','organic');tab_info(Event,'Meat'); ">Meat</a>
+        <a class="tab_links" onclick=" populateListProductChoices('Diet','displayProductSnack','organic');tab_info(Event,'Snack');">Snack</a>
     </div>
     <a class="tab_links" onclick="tab_info(Event,'Cart')" >Cart</a>
 
@@ -38,7 +39,7 @@
     <input type="radio" id="None" name="Diet" value="None">
     <label for="VegAGlu">None</label>
     </form>
-    <br><br>Would you like to see only organic products?
+    <br><br>Organic only option:
     <input type="checkbox" id="organic" name="organic" value=true onchange="populateListProductChoices('Diet','displayProduct',this.id)">
     <label for="organic">Organic Products</label><br><br>
 </div>
@@ -49,7 +50,7 @@
     Choose items to buy:
     <div id="displayProduct"></div>
     <button id="addCart" type="button" class="block" onclick="selectedItems()">
-        Add
+        Add Item
     </button>
 </div>
 
@@ -59,7 +60,7 @@
     Choose items to buy:
     <div id="displayProductFruits"></div>
     <button id="addCartFruits" type="button" class="block" onclick="selectedItems()">
-        Add
+        Add Item
     </button>
 </div>
 <div id="Dairy" class="tab_content">
@@ -68,7 +69,7 @@
     Choose items to buy:
     <div id="displayProductDairy"></div>
     <button id="addCartDairy" type="button" class="block" onclick="selectedItems()">
-        Add
+        Add Item
     </button>
 </div>
 <div id="Bread" class="tab_content">
@@ -77,7 +78,7 @@
     Choose items to buy:
     <div id="displayProductBread"></div>
     <button id="addCartBread" type="button" class="block" onclick="selectedItems()">
-        Add
+        Add Item
     </button>
 </div>
 <div id="Meat" class="tab_content">
@@ -86,7 +87,7 @@
     Choose items to buy:
     <div id="displayProductMeat"></div>
     <button id="addCartMeat" type="button" class="block" onclick="selectedItems()">
-        Add
+        Add Item
     </button>
 </div>
 <div id="Snack" class="tab_content">
@@ -95,7 +96,7 @@
     Choose items to buy:
     <div id="displayProductSnack"></div>
     <button id="addCartSnack" type="button" class="block" onclick="selectedItems()">
-        Add
+        Add Item
     </button>
 </div>
 <div id="Cart" class="tab_content">

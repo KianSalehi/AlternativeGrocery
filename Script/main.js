@@ -49,9 +49,23 @@ function populateListProductChoices(slct1, slct2, is_organic) {
     else{
         organic = false
     }
+    let type;
+    if (s2.id == "displayProductFruits") {
+        type = "fruit"
+    } else if (s2.id == "displayProductDairy") {
+        type = "dairy"
+    } else if (s2.id == "displayProductSnack") {
+        type = "snack"
+    } else if (s2.id == "displayProductMeat") {
+        type = "meat"
+    } else if (s2.id == "displayProductBread") {
+        type = "bread"
+    } else {
+        type = "all"
+    }
     let preference=s1.elements["Diet"].value
     // obtain a reduced list of products based on restrictions
-    let optionArray = restrictList(products, preference, organic);
+    let optionArray = restrictList(products, preference, organic, type);
     // for each item in the array, create a checkbox element, each containing information such as:
     // <input type="checkbox" name="product" value="Bread">
     // <label for="Bread"><img src=""/>Bread/label><br>
