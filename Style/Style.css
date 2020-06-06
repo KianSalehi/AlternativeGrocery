@@ -64,6 +64,14 @@
 body{
     background-color: #7ca068;
 }
+
+/*Style the footer*/
 footer{
-    margin-top: 500px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #111111;
+    color: #3d6c09;
+    text-align: center;
 }
