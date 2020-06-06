@@ -1,3 +1,5 @@
+<!--Codes from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sidenav_dropdown
+// were used in the sidenav class-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,16 +10,23 @@
 <body>
 <div class="sidenav">
     <a class="tab_links" onclick="tab_info(Event,'Client')">Client</a>
-    <a class="tab_links" onclick="tab_info(Event,'Products')" >Products</a>
+    <button class="dropdown-btn">Products
+        <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+        <a class="tab_links" onclick="tab_info(Event,'Fruits')">Fruits</a>
+        <a class="tab_links" onclick="tab_info(Event,'Dairy')">Dairy</a>
+        <a class="tab_links" onclick="tab_info(Event,'Bread')">Bread</a>
+        <a class="tab_links" onclick="tab_info(Event,'Meat')">Meat</a>
+    </div>
     <a class="tab_links" onclick="tab_info(Event,'Cart')" >Cart</a>
+
 </div>
 <!-- Tab content -->
 <div id="Client" class="tab_content">
     <h3>Client Information</h3>
-    <p>Tell us about your preferences.</p>
-    <input type="checkbox" id="organic" name="organic" value=true onchange="populateListProductChoices('Diet','displayProduct',this.id)">
-    <label for="organic">Organic Products</label><br><br>
-    Dietary Preference:<br>
+    <p>Tell us about your preferences: </p>
+    Dietary Preference:<br><br>
     <form id="Diet" onchange="populateListProductChoices(this.id,'displayProduct','organic')">
     <input type="radio" id="VegAGlu" name="Diet" value="VegAGlu">
     <label for="VegAGlu">Vegetarian and Gluten-Free</label>
@@ -28,6 +37,9 @@
     <input type="radio" id="None" name="Diet" value="None">
     <label for="VegAGlu">None</label>
     </form>
+    <br><br>Would you like to see only organic products?
+    <input type="checkbox" id="organic" name="organic" value=true onchange="populateListProductChoices('Diet','displayProduct',this.id)">
+    <label for="organic">Organic Products</label><br><br>
 </div>
 
 <div id="Products" class="tab_content">
@@ -42,7 +54,7 @@
 
 <div id="Cart" class="tab_content">
     <h3>Cart</h3>
-    <p>Your shopping cart.</p>
+    <p>Your shopping cart:</p>
     <div id="displayCart"></div>
 </div>
 

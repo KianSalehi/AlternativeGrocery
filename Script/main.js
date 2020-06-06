@@ -1,7 +1,21 @@
 //Inspired by https://www.w3schools.com/howto/howto_js_tabs.asp
-
+// Codes from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sidenav_dropdown
+//were used for the functionality of the dropdown
 //Function called when tabs are clicked
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
 
+for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+        } else {
+            dropdownContent.style.display = "block";
+        }
+    });
+}
 function tab_info(evt,tab_name){
     // Get all elements with class ="tab_content" and hide them
     let tab_content = document.getElementsByClassName("tab_content");
@@ -40,26 +54,35 @@ function populateListProductChoices(slct1, slct2, is_organic) {
     let optionArray = restrictList(products, preference, organic);
     // for each item in the array, create a checkbox element, each containing information such as:
     // <input type="checkbox" name="product" value="Bread">
-    // <label for="Bread">Bread/label><br>
+    // <label for="Bread"><img src=""/>Bread/label><br>
 
+    let imgfile;
     for (i = 0; i < optionArray.length; i++) {
 
-        var productName = optionArray[i];
+        let productName = optionArray[i];
         // create the checkbox and add in HTML DOM
-        var checkbox = document.createElement("input");
+        let checkbox = document.createElement("input");
         checkbox.type = "checkbox";
         checkbox.name = "product";
         checkbox.value = productName;
         s2.appendChild(checkbox);
 
         // create a label for the checkbox, and also add in HTML DOM
-        var label = document.createElement('label')
+        let label = document.createElement('label')
         label.htmlFor = productName;
+        let img = document.createElement('img')
+        for (let i = 0; i < products.length; i += 1) {
+            if (productName == products[i].name + " $" + products[i].price) {
+                imgfile = products[i].photo;
+            }
+        }
+        img.src = imgfile
+        label.appendChild(img)
         label.appendChild(document.createTextNode(productName));
         s2.appendChild(label);
 
         // create a breakline node and add in HTML DOM
-        s2.appendChild(document.createElement("br"));
+        s2.appendChild(document.createElement('br'))
     }
 }
 

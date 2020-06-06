@@ -4,69 +4,90 @@ var products =[
         vegetarian:true,
         glutenFree:true,
         organic:true,
-        price:1.99},
+        price:1.99,
+        //image taken from https://www.medicalnewstoday.com/articles/325879
+        photo:"photos/Banana.jpg"
+    },
     {
         name: "Bread",
         vegetarian: true,
         glutenFree: false,
         organic: false,
-        price: 2.55
+        price: 2.55,
+        //image taken from https://www.kingarthurflour.com/recipes/the-easiest-loaf-of-bread-youll-ever-bake-recipe
+        photo: "photos/Bread.jpg"
     },
     {
         name: "Apple",
         vegetarian: true,
         glutenFree: true,
         organic: true,
-        price:0.99
+        price:0.99,
+        //img taken from https://www.healthline.com/health-news/gmo-apples-potatoes-hitting-shelves
+        photo: "photos/Apples.jpg"
     },
     {
         name: "Chicken breast (4pcs- medium)",
         vegetarian: false,
         glutenFree: true,
         organic: false,
-        price: 12.00
+        price: 12.00,
+        //img taken from https://www.tasteofhome.com/collection/chicken-mistakes/
+        photo: "photos/Chicken.jpg"
     },
     {
         name: "Milk 1.2L",
         vegetarian: true,
         glutenFree: true,
         organic: false,
-        price: 3.00
+        price: 3.00,
+        //img taken from https://dairyfarmersofcanada.ca/en/8-facts-you-should-know-about-canadian-milk-and-antibiotics
+        photo: "photos/Milk.jpg"
     },
     {
         name: "Pizza dough",
         vegetarian: true,
         glutenFree: false,
         organic: false,
-        price: 6.00
+        price: 6.00,
+        //img taken from https://tastesbetterfromscratch.com/perfect-pizza-crust/
+        photo: "photos/Pizza dough.jpg"
     },
     {
         name: "Popcorn",
         vegetarian: false,
         glutenFree: true,
         organic: false,
-        price: 12.00
+        price: 12.00,
+        //img taken from https://cleangreensimple.com/article/vegan-popcorn/
+        photo: "photos/Popcorn.jpg"
     },
     {
         name: "Yogurt",
         vegetarian: true,
         glutenFree: true,
         organic:true,
-        price: 6.00
+        price: 6.00,
+        //img taken from https://www.medicalnewstoday.com/articles/323169
+        photo: "photos/Yogurt.jpg"
     },
     {
         name: "Salmon",
         vegetarian: false,
         glutenFree: true,
         organic: true,
-        price: 12.00
+        price: 12.00,
+        //img taken from https://smokeandthyme.com/2014/01/16/beetroot-cured-salmon/raw-salmon/
+        photo: "photos/Salmon.jpg"
     },
     {
         name: "Eggs (12pcs)",
         vegetarian: true,
         glutenFree: true,
         organic: true,
-        price: 5.99
+        price: 5.99,
+        //img taken from https://www.healthline.com/nutrition/10-proven-health-benefits-of-eggs
+        photo: "photos/Eggs.jpg"
     }
 ];
 
