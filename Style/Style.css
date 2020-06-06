@@ -72,11 +72,13 @@
 /* Change background color of buttons on hover */
 .tab button:hover {
     background-color: #ddd;
+    cursor: pointer;
 }
 
 /* Create an active/current tablink class */
 .tab button.active {
     background-color: #ccc;
+    cursor: pointer;
 }
 
 /* Style the tab content */
@@ -111,4 +113,12 @@ label img {
     transform-origin: 50% 50%;
     padding-inline: inherit;
     font-family: Calibri;
+}
+.divmain{
+    display: block;
+    text-align: center;
+}
+.bold{
+    font-weight: bolder;
+    font-size: 40px;
 }
