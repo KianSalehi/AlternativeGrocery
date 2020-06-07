@@ -19,7 +19,7 @@
     padding: 6px 8px 6px 16px;
     text-decoration: none;
     font-size: 20px;
-    color: #454c30;
+    color: #5b653c;
     display: block;
     border: none;
     background: none;
@@ -93,6 +93,7 @@
 }
 body{
     background-color: #7ca068;
+    font-family: Calibri;
 }
 
 /*Style the footer*/
@@ -121,4 +122,20 @@ label img {
 .bold{
     font-weight: bolder;
     font-size: 40px;
+}
+
+.clientbtn{
+    display: inline-block;
+    border-radius: 3px;
+    background-color: #316a20;
+    border: none;
+    color: #0e0e0e;
+    text-align: center;
+    font-size: 19px;
+    padding: 20px;
+    width: 100px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    font-family: Calibri;
 }
